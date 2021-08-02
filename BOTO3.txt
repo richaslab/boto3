@@ -1,3 +1,22 @@
 BOTO3
 _____________________________
 2021-08-02-19-29-38.png
+
+Clients
+------------------
+Low level service access
+
+import boto3
+
+# Create a low-level client with the service name
+sqs = boto3.client('sqs')
+
+Resources
+------------------
+Resources represent an object-oriented interface to Amazon Web Services (AWS). They provide a higher-level abstraction than the raw, low-level calls made by service clients. To use resources, you invoke the resource() method of a Session and pass in a service name:
+
+# Get resources from the default session
+sqs = boto3.resource('sqs')
+s3 = boto3.resource('s3')
+
+
